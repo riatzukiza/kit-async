@@ -1,6 +1,6 @@
 {
   "name": "@kit-js/async",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "author": "Aaron Beavers <foamy125@gmail.com>",
   "license": "MIT",
