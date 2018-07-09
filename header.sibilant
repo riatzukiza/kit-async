@@ -7,7 +7,13 @@
         (indent (apply ^do body))
         "\n}"])
 
+(def-lit-macro def-async (name args ...body)
+  ["async  " @name "(" (interleave (content-of args) ",")")" "{\n"
+
+   (indent (apply ^do body))
+   "\n}"])
+
 (macro await (value) ["await " value])
 
 (require! (lit Actor ) "@kit-js/async/lib/actor"
-          (lit Event-emitter ) "@kit-js/async/lib/actor")
+          (lit Event-emitter ) "@kit-js/async/lib/event-emitter")
